@@ -41,9 +41,9 @@
 
         var numOfRecords = parseInt("<%= numOfRecords %>");
 
-        const urlParams = new URLSearchParams(window.location.search);
-        var limit = Math.max(parseInt(urlParams.get("limit")), 2) || 2;
-        var offset = Math.max(parseInt(urlParams.get("offset")), 0) || 0;
+        // const urlParams = new URLSearchParams(window.location.search);
+        // var limit = Math.max(parseInt(urlParams.get("limit")), 2) || 2;
+        // var offset = Math.max(parseInt(urlParams.get("offset")), 0) || 0;
 
         async function fetchData(limit, offset) {
 

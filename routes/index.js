@@ -68,15 +68,17 @@ router.post('/bookings/:id', function (req, res) {
 
   if (!result) return res.status(404).send('Unable to find the requested resource!');
 
-  db.getCollection("bookings").remove(result);
-
-  res.send("Booking deleted.");
-
   if (req.get('Accept').indexOf('html') === -1) {
     return res.status(204).send();	    // for ajax request
   } else {
     return res.redirect('/bookings');	// for normal HTML request
   }
+
+  db.getCollection("bookings").remove(result);
+
+  res.send("Booking deleted.");
+
+
 
 });
 
